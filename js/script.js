@@ -15,37 +15,42 @@ testWebP(function (support) {
 
 // слайдер
 
-// const left = document.querySelector("#left");
-// const right = document.querySelector("#right");
-// const items = document.querySelector("#items");
-// const computed = getComputedStyle(items);
 
-// right.addEventListener("click", function(e) {
-//     e.preventDefault ();
 
-//     let currentRight = parseInt(computed.right);
+ymaps.ready(init);
+function init(){ 
+    // Создание карты.    
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [44.995392,39.076347],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 16
+    });
 
-//     if (!currentRight); {
-//         currentRight == 0;
-//     }
+     // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
 
-//     if (currentRight < 1780) {
-//         items.style.right = currentRight + 380 + "px";
-//     }
-    
-// });
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        balloonContent: 'Краснодар, пр-т Писателя Знаменского 9к3'
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '../img/logo.png',
+        // Размеры метки.
+        iconImageSize: [40, 40],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-13, -50]
+    })
 
-// left.addEventListener("click", function(e) {
-//     e.preventDefault ();
-
-//     let currentRight = parseInt(computed.right);
-
-//     if (!currentRight); {
-//         currentRight == 0;
-//     }
-
-//     if (currentRight > 0) {
-//         items.style.right = currentRight - 380 + "px";
-//     }
-
-// });
+    myMap.geoObjects
+        .add(myPlacemark);
+}

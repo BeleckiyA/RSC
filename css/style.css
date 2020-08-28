@@ -685,6 +685,10 @@ body {
   margin-bottom: 10px;
 }
 
+.video {
+  margin-bottom: 30px;
+}
+
 .video__title {
   font-size: 48px;
   text-align: center;
@@ -770,7 +774,7 @@ body {
   margin-bottom: 15px;
 }
 
-.title {
+.social__title {
   font-size: 48px;
 }
 
@@ -803,32 +807,266 @@ body {
 
 .social__icon-wrap {
   margin-right: 30px;
+  height: 80px;
+  width: 80px;
 }
 
 .social__icon-wrap:last-child {
   margin-right: 0;
 }
 
-.social__icon-width {
+.social__link {
+  color: #e5e5e5;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 50%;
-  width: 84px;
-  height: 84px;
-  background-color: #fff;
+  border: 2px solid #e5e5e5;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
-  position: relative;
 }
 
-.social__icon-width img {
-  width: 62px;
-  height: 62px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.watsapp__link svg {
+  stroke: #e5e5e5;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.watsapp__link:hover {
+  border: 2px solid #43d854;
+}
+
+.watsapp__link:hover svg {
+  stroke: #43d854;
+}
+
+.viber__link svg {
+  width: 50px;
+  height: 50px;
+  fill: #e5e5e5;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.viber__link:hover {
+  border: 2px solid #7360f2;
+}
+
+.viber__link:hover svg {
+  fill: #7360f2;
+}
+
+.telegram__link svg {
+  stroke: #e5e5e5;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.telegram__link:hover {
+  border: 2px solid #0088cc;
+}
+
+.telegram__link:hover svg {
+  stroke: #0088cc !important;
+}
+
+.vk__link svg {
+  width: 40px;
+  height: 40px;
+  fill: #e5e5e5;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.vk__link:hover {
+  border: 2px solid #597da3;
+}
+
+.vk__link:hover svg {
+  fill: #597da3;
+}
+
+.inst__link svg {
+  width: 40px;
+  height: 40px;
+  fill: #e5e5e5;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.inst__link:hover {
+  border: 2px solid #3f729b;
+}
+
+.inst__link:hover svg {
+  fill: #3f729b;
+}
+
+.youtube__link svg {
+  fill: #e5e5e5;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.youtube__link:hover {
+  border: 2px solid #c4302b;
+}
+
+.youtube__link:hover svg {
+  fill: #c4302b;
+}
+
+.contacts {
+  margin-bottom: 60px;
+}
+
+.contacts__title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contacts__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.contacts__description {
+  width: 50%;
+  padding-right: 25px;
+}
+
+.contacts__description-col {
+  margin-bottom: 15px;
+}
+
+.contacts__description-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+.maps__img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.maps__link {
+  width: 250px;
+  height: 150px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.maps__link:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.yandex__link {
+  content: "";
+  background-image: url(../img/Logotip-Yandex.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.google__link {
+  height: 130px;
+  content: "";
+  background-image: url(../img/Google_Maps_Logo_2020.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gis__link {
+  height: 130px;
+  content: "";
+  background-image: url(../img/gis.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer {
+  width: 100%;
+  border-top: 1px solid #885aa5;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  font-size: 18px;
+  opacity: .7;
+}
+
+.footer__icon-wrap {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.footer__icon-wrap:last-child {
+  margin-right: 0;
+}
+
+.footer__vk svg {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__inst svg {
+  height: 30px;
+  width: 30px;
 }
 
 @media screen and (max-width: 991px) {
@@ -851,3 +1089,7 @@ body {
 }
 
 .webp .hero { background-image: url(../img/hero.webp); }
+
+.webp .yandex__link { background-image: url(../img/Logotip-Yandex.webp); }
+
+.webp .gis__link { background-image: url(../img/gis.webp); }
