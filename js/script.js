@@ -43,7 +43,7 @@ function init(){
         // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
         // Своё изображение иконки метки.
-        iconImageHref: '../img/logo.png',
+        iconImageHref: './img/logo.png',
         // Размеры метки.
         iconImageSize: [40, 40],
         // Смещение левого верхнего угла иконки относительно
