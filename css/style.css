@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "roboto";
   font-display: swap;
@@ -695,26 +697,49 @@ body {
   margin-bottom: 60px;
 }
 
-.slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+/* Слайдер */
+
+.slick-slider {
+  padding: 0 50px;
 }
 
-.video__list {
+/* Слайдер запущен */
+
+/* Слайдер с точками */
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+
+.slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
 }
 
-.arrow__link {
+/* Слайд */
+
+.slick-slide {
+  margin-right: 10px;
+}
+
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+
+/* Слайд по центру */
+
+/* Клонированный слайд */
+
+/* Стрелка */
+
+.slick-arrow {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 55%;
   background-color: rgba(136, 90, 165, 0.7);
   width: 36px;
   height: 36px;
@@ -733,31 +758,55 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
+  font-size: 0;
+  border: 0;
 }
 
-.arrow__link:hover {
+.slick-arrow:hover {
   background-color: #885aa5;
 }
 
-.arrow__left {
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {
+  left: 0;
+}
+
+.slick-arrow.slick-prev::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background: url(../img/arrow-scroll.svg) center center/90% no-repeat;
+  z-index: 2;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-.arrow__right {
+/* Стрелка вправо */
+
+.slick-arrow.slick-next {
   right: 0;
+}
+
+.slick-arrow.slick-next::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background: url(../img/arrow-scroll.svg) center center/90% no-repeat;
+  z-index: 2;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.video__wrap {
-  width: 360px;
-  height: 215px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
+/* Стрелка не активная */
+
+/* Точки (булиты) */
+
+/* Активная точка */
+
+/* Элемент точки */
 
 .social {
   background-color: #2a2525;
@@ -1088,8 +1137,8 @@ body {
   }
 }
 
-.webp .hero { background-image: url(../img/hero.webp); }
+.webp .hero{ background-image: url(../img/hero.webp); }
 
-.webp .yandex__link { background-image: url(../img/Logotip-Yandex.webp); }
+.webp .yandex__link{ background-image: url(../img/Logotip-Yandex.webp); }
 
-.webp .gis__link { background-image: url(../img/gis.webp); }
+.webp .gis__link{ background-image: url(../img/gis.webp); }
