@@ -158,8 +158,9 @@ body {
 }
 
 .menu__list.active .menu__item {
-  overflow: visible;
-  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__logo {
@@ -1325,8 +1326,7 @@ body.lock {
             flex-direction: column;
     z-index: 3;
     padding: 100px 0 0 30px;
-    overflow: hidden;
-    opacity: 0;
+    display: none;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
