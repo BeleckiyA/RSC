@@ -174,8 +174,15 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+
 $(document).ready(function() {
     $('.menu__icon').click(function(event) {
         $('.menu__icon, .menu__list').toggleClass('active');
+    });
+});
+
+$(document).ready(function() {
+    $('.menu__link').click(function(event) {
+        $('.menu__icon, .menu__list').removeClass('active');
     });
 });
